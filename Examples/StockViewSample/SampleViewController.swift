@@ -181,6 +181,8 @@ class SampleViewController: UIViewController {
         let item = UISegmentedControl(items: ["Line", "Area"])
         item.addTarget(self, action: #selector(whenDisplayStyleValueChanged(_:)), for: .valueChanged)
         item.frame = CGRect(x: 0, y: (44-30)/2.0, width: 85, height: 30)
+        item.setImage(UIImage.init(named: "stock_style_line"), forSegmentAt: 0)
+        item.setImage(UIImage.init(named: "stock_style_area"), forSegmentAt: 1)
         item.selectedSegmentIndex = selectedIndex
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: item)
     }
