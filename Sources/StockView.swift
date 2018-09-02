@@ -197,9 +197,7 @@ class StockView: UIView {
         self.eventPointCircle?.center = self.eventDataPoint
         
         // Found Times
-        if let index = self.points.firstIndex(where: { (point) -> Bool in
-            return point.x == self.eventDataPoint.x && point.y == self.eventDataPoint.y
-        }) {
+        if let index = self.index(with: self.eventDataPoint) {
             if index >= 0, index < self.stocks.count {
                 let stock = self.stocks[index]
                 let time = stock.time
@@ -208,6 +206,16 @@ class StockView: UIView {
                 self.eventRecall.call([time: value])
             }
         }
+    }
+    
+    private func index(with point: CGPoint) -> Int? {
+        for i in 0..<self.points.count {
+            if point.x == self.points[i].x && point.y == self.points[i].y {
+                return i
+            }
+        }
+        
+        return nil
     }
     
     private func removeEventInfo() {
