@@ -10,3 +10,4 @@ This project is available through [CocoaPods](https://cocoapods.org/). To instal
 ```ruby
 pod "YStockView"
 ```
+You can also just drag the StockView.swift file into your project to use it.
