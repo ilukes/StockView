@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class YStockView: UIView {
+public class YStockView: UIView {
     
     struct Stock {
         var time: TimeInterval
@@ -91,7 +91,7 @@ class YStockView: UIView {
         super.init(coder: aDecoder)
     }
     
-    override func draw(_ rect: CGRect) {
+    public override func draw(_ rect: CGRect) {
         guard !self.points.isEmpty else {
             return
         }
@@ -131,7 +131,7 @@ class YStockView: UIView {
     
     // MARK: - Event
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if self.points.isEmpty {
             return
         }
@@ -143,19 +143,19 @@ class YStockView: UIView {
         }
     }
     
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override public func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
             self.eventPoint = touch.location(in: self)
             self.displayEventInfo()
         }
     }
     
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.begin = false
         self.removeEventInfo()
     }
     
-    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override public func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.begin = false
         self.removeEventInfo()
     }
@@ -388,7 +388,7 @@ class YStockView: UIView {
     
 }
 
-class SDelegate<Input, Output> {
+public class SDelegate<Input, Output> {
     
     private var block: ((Input) -> Output?)?
     
