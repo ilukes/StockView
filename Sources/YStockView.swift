@@ -11,52 +11,52 @@ import UIKit
 
 public class YStockView: UIView {
     
-    struct Stock {
+    public struct Stock {
         var time: TimeInterval
         var value: Double = 0
     }
     
-    enum DisplayStyle: Int {
+    public enum DisplayStyle: Int {
         case Line = 0
         case Area = 1
     }
     
     // MARK: - Property
     
-    var leftMargin: CGFloat = 10
-    var bottomMargin: CGFloat = 30
-    var topMargin: CGFloat = 5
-    var rightMargin: CGFloat = 10
-    var diffMargin: CGFloat = 20
-    var boundLineColor: UIColor = .darkGray
-    var boundLineWidth: CGFloat = CGFloat(1.0/Double(UIScreen.main.scale))
+    public var leftMargin: CGFloat = 10
+    public var bottomMargin: CGFloat = 30
+    public var topMargin: CGFloat = 5
+    public var rightMargin: CGFloat = 10
+    public var diffMargin: CGFloat = 20
+    public var boundLineColor: UIColor = .darkGray
+    public var boundLineWidth: CGFloat = CGFloat(1.0/Double(UIScreen.main.scale))
     
-    var timeTextColor: UIColor = .white
-    var timeFont: UIFont = UIFont.systemFont(ofSize: 12)
-    var timeSegmentCount: Int = 4 // How many times do you want to display
+    public var timeTextColor: UIColor = .white
+    public var timeFont: UIFont = UIFont.systemFont(ofSize: 12)
+    public var timeSegmentCount: Int = 4 // How many times do you want to display
     
-    var valueTextColor: UIColor = .white
-    var valueFont: UIFont = UIFont.systemFont(ofSize: 12)
-    var valueSegmentCount: Int = 4 // How many values do you want to display
-    var valueLineColor: UIColor = .lightGray
-    var valueLineWidth: CGFloat = CGFloat(1.0/Double(UIScreen.main.scale))
+    public var valueTextColor: UIColor = .white
+    public var valueFont: UIFont = UIFont.systemFont(ofSize: 12)
+    public var valueSegmentCount: Int = 4 // How many values do you want to display
+    public var valueLineColor: UIColor = .lightGray
+    public var valueLineWidth: CGFloat = CGFloat(1.0/Double(UIScreen.main.scale))
     
-    var eventLineColor: UIColor = .white
-    var eventLineHeightWidth: CGFloat = CGFloat(1.0/Double(UIScreen.main.scale))
-    var eventPointColor: UIColor = .white
-    var eventPointRadius: CGFloat = 2.50
-    var eventLineWidth: CGFloat = CGFloat(1.0/Double(UIScreen.main.scale))
+    public var eventLineColor: UIColor = .white
+    public var eventLineHeightWidth: CGFloat = CGFloat(1.0/Double(UIScreen.main.scale))
+    public var eventPointColor: UIColor = .white
+    public var eventPointRadius: CGFloat = 2.50
+    public var eventLineWidth: CGFloat = CGFloat(1.0/Double(UIScreen.main.scale))
     
-    var stockLineColor: UIColor = .blue
-    var stockLineWidth: CGFloat = 1.0
-    var stockAreaColor: UIColor = .red
+    public var stockLineColor: UIColor = .blue
+    public var stockLineWidth: CGFloat = 1.0
+    public var stockAreaColor: UIColor = .red
     
-    var displayStyle: DisplayStyle = .Line
+    public var displayStyle: DisplayStyle = .Line
     
-    var infoRecall: SDelegate = SDelegate<[Double], Void>() // [] Will has three values. Min/Avg/Max
-    var eventRecall: SDelegate = SDelegate<[TimeInterval: Double], Void>() // When user hold the view will call this
-    var timeFormatRecall: SDelegate = SDelegate<TimeInterval, String>() // If you want to custom the time info for display you can implement this.
-    var valueFormatRecall: SDelegate = SDelegate<Double, String>() // If you want to custom the value info for display you can implement this. e.g. %.2f %.4f %.6f ...
+    public var infoRecall: SDelegate = SDelegate<[Double], Void>() // [] Will has three values. Min/Avg/Max
+    public var eventRecall: SDelegate = SDelegate<[TimeInterval: Double], Void>() // When user hold the view will call this
+    public var timeFormatRecall: SDelegate = SDelegate<TimeInterval, String>() // If you want to custom the time info for display you can implement this.
+    public var valueFormatRecall: SDelegate = SDelegate<Double, String>() // If you want to custom the value info for display you can implement this. e.g. %.2f %.4f %.6f ...
     
     private var points: [CGPoint] = []
     private var minValue: Double = 0
@@ -75,7 +75,7 @@ public class YStockView: UIView {
     
     // MARK: - Setter/Getter
     
-    var stocks: [Stock] = [] {// Must set from outside
+    public var stocks: [Stock] = [] {// Must set from outside
         didSet {
             self.loadData()
         }
