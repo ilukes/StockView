@@ -17,7 +17,7 @@ class SampleViewController: UIViewController {
     @IBOutlet weak var maxLabel: UILabel!
     @IBOutlet weak var avgLabel: UILabel!
     @IBOutlet weak var minLabel: UILabel!
-    @IBOutlet weak var stockView: StockView!
+    @IBOutlet weak var stockView: YStockView!
     
     private var  rangeSegmentedControl: UISegmentedControl?
     private var valueSegmentedControl: UISegmentedControl?
@@ -190,7 +190,7 @@ class SampleViewController: UIViewController {
     func loadChartPoints() {
         if let index = self.rangeSegmentedControl?.selectedSegmentIndex, let range = self.store.range(with: index) {
             if let meta = self.store.meta(with: range) {
-                var points: [StockView.Stock] = []
+                var points: [YStockView.Stock] = []
                 
                 if let opens = meta.getValues(with: "open"), let closes = meta.getValues(with: "close"), let lows = meta.getValues(with: "low"), let highs = meta.getValues(with: "high") {
                     for i in 0..<meta.times.count {
@@ -230,7 +230,7 @@ class SampleViewController: UIViewController {
                         }
                         
                         if value > 0.000001 {
-                            points.append(StockView.Stock(time: ds, value: value))
+                            points.append(YStockView.Stock(time: ds, value: value))
                         }
                     }
                 }

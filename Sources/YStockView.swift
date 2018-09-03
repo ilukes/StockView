@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class StockView: UIView {
+class YStockView: UIView {
     
     struct Stock {
         var time: TimeInterval

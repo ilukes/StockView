@@ -11,7 +11,7 @@
 		82C0A37E2138F7B400E0CC37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C0A37C2138F7B400E0CC37 /* Main.storyboard */; };
 		82C0A3802138F7B500E0CC37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82C0A37F2138F7B500E0CC37 /* Assets.xcassets */; };
 		82C0A3832138F7B500E0CC37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C0A3812138F7B500E0CC37 /* LaunchScreen.storyboard */; };
-		82C0A38C2138F85A00E0CC37 /* StockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C0A38B2138F85A00E0CC37 /* StockView.swift */; };
+		82C0A38C2138F85A00E0CC37 /* YStockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C0A38B2138F85A00E0CC37 /* YStockView.swift */; };
 		82C0A38E2138FD0700E0CC37 /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C0A38D2138FD0700E0CC37 /* SampleViewController.swift */; };
 		82C0A3902138FDA700E0CC37 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C0A38F2138FDA700E0CC37 /* Store.swift */; };
 		ADAF7FA8B956584F719E5491 /* Pods_StockViewSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32BD39EC65CE87809DFD1C07 /* Pods_StockViewSample.framework */; };
@@ -26,7 +26,7 @@
 		82C0A37F2138F7B500E0CC37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82C0A3822138F7B500E0CC37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82C0A3842138F7B500E0CC37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		82C0A38B2138F85A00E0CC37 /* StockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockView.swift; sourceTree = "<group>"; };
+		82C0A38B2138F85A00E0CC37 /* YStockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YStockView.swift; sourceTree = "<group>"; };
 		82C0A38D2138FD0700E0CC37 /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
 		82C0A38F2138FDA700E0CC37 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		FBAEF76FA2B4D7F79B333FAE /* Pods-StockViewSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockViewSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StockViewSample/Pods-StockViewSample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 		82C0A38A2138F85A00E0CC37 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				82C0A38B2138F85A00E0CC37 /* StockView.swift */,
+				82C0A38B2138F85A00E0CC37 /* YStockView.swift */,
 			);
 			name = Sources;
 			path = ../../Sources;
@@ -217,7 +217,7 @@
 			files = (
 				82C0A3902138FDA700E0CC37 /* Store.swift in Sources */,
 				82C0A3792138F7B400E0CC37 /* AppDelegate.swift in Sources */,
-				82C0A38C2138F85A00E0CC37 /* StockView.swift in Sources */,
+				82C0A38C2138F85A00E0CC37 /* YStockView.swift in Sources */,
 				82C0A38E2138FD0700E0CC37 /* SampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
