@@ -11,9 +11,14 @@ import UIKit
 
 public class YStockView: UIView {
     
-    public struct Stock {
-        var time: TimeInterval
-        var value: Double = 0
+    public class Stock {
+        public var time: TimeInterval = 0
+        public var value: Double = 0
+        
+        public init(time: TimeInterval, value: Double) {
+            self.time = time
+            self.value = value
+        }
     }
     
     public enum DisplayStyle: Int {
